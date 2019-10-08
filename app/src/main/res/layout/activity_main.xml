@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 
 
     <ScrollView
@@ -20,8 +18,7 @@
         <RelativeLayout
             android:id="@+id/activity_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/main_linear_layout"
@@ -38,19 +35,11 @@
 
                 <LinearLayout
                     android:id="@+id/Layout_player_1_2"
-                    android:visibility="visible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/External_Layout">
 
                     <LinearLayout
                         android:id="@+id/player_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -60,24 +49,15 @@
 
                             <TextView
                                 android:id="@+id/player_1_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
                                 android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_1_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 1" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
@@ -88,12 +68,7 @@
 
                     <LinearLayout
                         android:id="@+id/player_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -103,59 +78,34 @@
 
                             <TextView
                                 android:id="@+id/player_2_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_2_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 2" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>
 
                 <View
                     android:id="@+id/view_1_2"
-                    android:visibility="visible"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@android:color/darker_gray" />
+                    style="@style/horizontal_view" />
 
                 <LinearLayout
                     android:id="@+id/Layout_player_3_4"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    style="@style/External_Layout">
 
 
                     <LinearLayout
                         android:id="@+id/player_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -165,24 +115,15 @@
 
                             <TextView
                                 android:id="@+id/player_3_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_3_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 3" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
@@ -194,10 +135,7 @@
 
                     <LinearLayout
                         android:id="@+id/player_4"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -207,24 +145,15 @@
 
                             <TextView
                                 android:id="@+id/player_4_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_4_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 4" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
@@ -234,30 +163,17 @@
                 <View
                     android:id="@+id/view_3_4"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@android:color/darker_gray" />
+                    style="@style/horizontal_view" />
 
                 <LinearLayout
                     android:id="@+id/Layout_player_5_6"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    style="@style/External_Layout">
 
 
                     <LinearLayout
                         android:id="@+id/player_5"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -267,24 +183,15 @@
 
                             <TextView
                                 android:id="@+id/player_5_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_5_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 5" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
@@ -296,12 +203,7 @@
 
                     <LinearLayout
                         android:id="@+id/player_6"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -311,24 +213,15 @@
 
                             <TextView
                                 android:id="@+id/player_6_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_6_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 6" />
+                            android:text="player 1"
+                            style="@style/TextView_name"/>
 
                     </LinearLayout>
 
@@ -337,30 +230,17 @@
                 <View
                     android:id="@+id/view_5_6"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@android:color/darker_gray" />
+                    style="@style/horizontal_view" />
 
                 <LinearLayout
                     android:id="@+id/Layout_player_7_8"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    style="@style/External_Layout">
 
 
                     <LinearLayout
                         android:id="@+id/player_7"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -370,24 +250,15 @@
 
                             <TextView
                                 android:id="@+id/player_7_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0"/>
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_7_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 7" />
+                            android:text="player 1"
+                            style="@style/TextView_name"/>
 
                     </LinearLayout>
 
@@ -399,12 +270,7 @@
 
                     <LinearLayout
                         android:id="@+id/player_8"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -414,24 +280,15 @@
 
                             <TextView
                                 android:id="@+id/player_8_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_8_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 8" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
@@ -440,31 +297,17 @@
                 <View
                     android:id="@+id/view_7_8"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@android:color/darker_gray" />
+                    style="@style/horizontal_view" />
 
                 <LinearLayout
                     android:id="@+id/Layout_player_9_10"
                     android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="70dp"
-                    android:layout_marginTop="20dp">
+                    style="@style/External_Layout">
 
 
                     <LinearLayout
                         android:id="@+id/player_9"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
+                        style="@style/singl_layout">
 
 
                         <androidx.cardview.widget.CardView
@@ -474,24 +317,15 @@
 
                             <TextView
                                 android:id="@+id/player_9_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0"/>
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_9_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 9" />
+                            android:text="player 1"
+                            style="@style/TextView_name"/>
 
                     </LinearLayout>
 
@@ -503,10 +337,7 @@
 
                     <LinearLayout
                         android:id="@+id/player_10"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        style="@style/singl_layout">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
@@ -515,45 +346,27 @@
 
                             <TextView
                                 android:id="@+id/player_10_score"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="10dp"
-                                android:gravity="center_horizontal"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="53sp" />
+                                style="@style/TextView_score"
+                                android:text="0" />
 
                         </androidx.cardview.widget.CardView>
+
                         <TextView
                             android:id="@+id/player_10_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingTop="20dp"
-                            android:maxLength="12"
-                            android:maxLines="1"
-                            android:text="player 10" />
+                            android:text="player 1"
+                            style="@style/TextView_name" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
 
-
             </LinearLayout>
 
             <Button
                 android:id="@+id/reset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:shadowColor="#FBE9E7"
-                android:background="#D81B60"
-                android:layout_weight="1"
-                android:textColor="#FBE9E7"
-                android:text="reset" />
+                android:text="reset"
+                style="@style/Button_reset" />
 
         </RelativeLayout>
 
@@ -599,10 +412,8 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/player_9_10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FloatingActionMenu"
             android:src="@drawable/fab_add"
-            android:visibility="visible"
             fab:fab_colorNormal="#D81B60"
             fab:fab_colorPressed="#D81B60"
             fab:fab_label="Ten Players"
@@ -610,10 +421,8 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/player_7_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FloatingActionMenu"
             android:src="@drawable/fab_add"
-            android:visibility="visible"
             fab:fab_colorNormal="#D81B60"
             fab:fab_colorPressed="#D81B60"
             fab:fab_label="Eight Players"
@@ -621,10 +430,8 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/player_5_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FloatingActionMenu"
             android:src="@drawable/fab_add"
-            android:visibility="visible"
             fab:fab_colorNormal="#D81B60"
             fab:fab_colorPressed="#D81B60"
             fab:fab_label="Six Players"
@@ -632,12 +439,8 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/player_3_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
-            android:paddingBottom="1dp"
+            style="@style/FloatingActionMenu"
             android:src="@drawable/fab_add"
-            android:visibility="visible"
             fab:fab_colorNormal="#D81B60"
             fab:fab_colorPressed="#D81B60"
             fab:fab_label="Four Players"
@@ -645,25 +448,12 @@
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/player_1_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FloatingActionMenu"
             android:src="@drawable/fab_add"
-            android:visibility="visible"
             fab:fab_colorNormal="#D81B60"
             fab:fab_colorPressed="#D81B60"
             fab:fab_label="Two Players"
             fab:fab_size="mini" />
-
-
-
-
-
-
-
-
-
-
-
 
 
     </com.github.clans.fab.FloatingActionMenu>
