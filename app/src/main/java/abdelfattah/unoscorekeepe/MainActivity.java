@@ -37,14 +37,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
 
-
-        Button fab1 = findViewById ( R.id.reset );
-        fab1.setOnClickListener ( new View.OnClickListener () {
+        /**
+         * Button for reset the score value and player name
+          */
+        Button reset = findViewById ( R.id.reset );
+        reset.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View view) {
                 setScoreToZero();
             }
         } );
+
+
         player_1 = (LinearLayout) findViewById(R.id.player_1);
         player_2 = (LinearLayout) findViewById(R.id.player_2);
         player_3 = (LinearLayout) findViewById(R.id.player_3);
@@ -321,6 +325,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 1.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_1(String value) {
         scoreForPlayer_1 += Integer.parseInt (value);
@@ -337,6 +342,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 2.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_2(String value) {
         scoreForPlayer_2 += Integer.parseInt (value);
@@ -352,6 +358,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 3.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_3(String value) {
         scoreForPlayer_3 += Integer.parseInt (value);
@@ -368,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 4.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_4(String value) {
         scoreForPlayer_4 += Integer.parseInt (value);
@@ -384,6 +392,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 5.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_5(String value) {
         scoreForPlayer_5 += Integer.parseInt (value);
@@ -400,6 +409,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 6.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_6(String value) {
         scoreForPlayer_6 += Integer.parseInt (value);
@@ -415,6 +425,7 @@ public class MainActivity extends AppCompatActivity {
     }
     /**
      * Displays the given score for player 7.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_7(String value) {
         scoreForPlayer_7 += Integer.parseInt (value);
@@ -431,6 +442,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 8.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_8(String value) {
         scoreForPlayer_8 += Integer.parseInt (value);
@@ -447,6 +459,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 9.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_9(String value) {
         scoreForPlayer_9 += Integer.parseInt (value);
@@ -463,6 +476,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given score for player 10.
+     *  @param  value The Value entered by the player .
      */
     private void displayScoreforPlayer_10(String value) {
         scoreForPlayer_10 += Integer.parseInt (value);
@@ -479,6 +493,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 1.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_1(String value) {
         playerName_1.setText (value);
@@ -487,6 +502,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 2.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_2(String value) {
         playerName_1.setText (value);
@@ -495,6 +511,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 3.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_3(String value) {
         playerName_3.setText (value);
@@ -503,6 +520,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 4.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_4(String value) {
         playerName_4.setText (value);
@@ -511,6 +529,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 5.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_5(String value) {
         playerName_5.setText (value);
@@ -519,6 +538,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 6.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_6(String value) {
         playerName_6.setText (value);
@@ -526,6 +546,7 @@ public class MainActivity extends AppCompatActivity {
     }
     /**
      * Displays the given name for player 7.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_7(String value) {
         playerName_7.setText (value);
@@ -534,6 +555,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 8.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_8(String value) {
         playerName_8.setText (value);
@@ -542,6 +564,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 9.
+     *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_9(String value) {
         playerName_9.setText (value);
@@ -550,12 +573,17 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays the given name for player 10.
+     * @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_10(String value) {
         playerName_10.setText (value);
         m_Text="";
     }
 
+    /**
+     * dialog for git the value from the players
+     * @param playerNumber the number of the player
+     */
     public void onClick_Dialog_Value(final int playerNumber) {
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -635,6 +663,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * dialog for get the name from the players
+     * @param playerNumber  the number of player
+     */
     public void onClick_Dialog_Name(final int playerNumber) {
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -714,7 +746,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-public void theWinDialog(String theWinMessage){
+    /**
+     * dialog to display message When a player wins, when the value of the score is 500 or more .
+     * @param theWinMessage A message containing congratulations with the name of the winner .
+     */
+    public void theWinDialog(String theWinMessage){
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
     builder.setTitle("The Win");
 
