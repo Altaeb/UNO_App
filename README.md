@@ -1,5 +1,4 @@
-#b 
- UNOScoreKeepe App
+# UNOScoreKeepe App
 Project which comes under Udacity Android Basics Nanodegree Program
 
 # Project Overview
