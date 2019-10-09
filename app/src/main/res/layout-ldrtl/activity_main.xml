@@ -361,6 +361,8 @@
 
     </ScrollView>
 
+
+
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/menu"
         android:layout_width="wrap_content"
@@ -384,7 +386,7 @@
         fab:menu_labels_paddingLeft="@dimen/dp_8"
         fab:menu_labels_paddingRight="@dimen/dp_8"
         fab:menu_labels_paddingTop="@dimen/dp_2"
-        fab:menu_labels_position="right"
+        fab:menu_labels_position="left"
         fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
         fab:menu_labels_showShadow="true"
         fab:menu_labels_singleLine="false"

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">حفظ النتيجة اونو</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="_0">0</string>
+    <string name="player_1">اللاعب 1</string>
+    <string name="player_2">اللاعب 2</string>
+    <string name="player_3">اللاعب 3</string>
+    <string name="player_4">اللاعب 4</string>
+    <string name="player_5">اللاعب 5</string>
+    <string name="player_6">اللاعب 6</string>
+    <string name="player_7">اللاعب 7</string>
+    <string name="player_8">اللاعب 8</string>
+    <string name="player_9">اللاعب 9</string>
+    <string name="player_10">اللاعب 10</string>
+    <string name="reset">إعادة تعيين</string>
+    <string name="ten_players">عشرة لاعبين</string>
+    <string name="eight_player">ثمانية لاعبين</string>
+    <string name="six_player">ستة لاعبين</string>
+    <string name="four_player">أربعة لاعبين</string>
+    <string name="tow_player">لاعبان</string>
+    <string name="congratulations_">مبروك يا بطل  ^_^ </string>
+    <string name="set_value">أدخل القيمة</string>
+    <string name="please_enter_value">ادخل قيمه من فضلك!</string>
+    <string name="set_name">أدخل الأسم</string>
+    <string name="please_enter_the_player_name">الرجاء إدخال اسم اللاعب!</string>
+    <string name="the_win">الفوز</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">موافق</string>
+    <string name="inter_the_value">أدخل القيمة</string>
+</resources>

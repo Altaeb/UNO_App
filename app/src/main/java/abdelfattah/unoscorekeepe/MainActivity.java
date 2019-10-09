@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.DialogInterface;
 import android.os.Bundle;
 
 
@@ -310,16 +309,16 @@ public class MainActivity extends AppCompatActivity {
         displayScoreforPlayer_10 ("0");
 
 
-        playerName_1.setText("Player 1");
-        playerName_2.setText("Player 2");
-        playerName_3.setText("Player 3");
-        playerName_4.setText("Player 4");
-        playerName_5.setText("Player 5");
-        playerName_6.setText("Player 6");
-        playerName_7.setText("Player 7");
-        playerName_8.setText("Player 8");
-        playerName_9.setText("Player 9");
-        playerName_10.setText("Player 10");
+        playerName_1.setText(R.string.player_1);
+        playerName_2.setText(R.string.player_2);
+        playerName_3.setText(R.string.player_3);
+        playerName_4.setText(R.string.player_4);
+        playerName_5.setText(R.string.player_5);
+        playerName_6.setText(R.string.player_6);
+        playerName_7.setText(R.string.player_7);
+        playerName_8.setText(R.string.player_8);
+        playerName_9.setText(R.string.player_9);
+        playerName_10.setText(R.string.player_10);
     }
 
 
@@ -334,7 +333,8 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_1>=500)
         {
 
-          String name = "    Congratulations, hero " + playerName_1.getText ().toString ();;
+          String name = getString( R.string.congratulations_)
+                        + playerName_1.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -350,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
         playerScoreTextView_2.setText( "" + scoreForPlayer_2 );;
         if (scoreForPlayer_2>=500)
         {
-            String name = "    Congratulations, hero " + playerName_2.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_2.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -367,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_3>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_3.getText ().toString ();;
+            String name = getString( R.string.congratulations_) + playerName_3.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -384,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_4>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_4.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_4.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -401,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_5>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_5.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_5.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -418,7 +418,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_6>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_6.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_6.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -434,7 +434,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_7>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_7.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_7.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -451,7 +451,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_8>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_8.getText ().toString ();;
+            String name = getString( R.string.congratulations_) + playerName_8.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -468,7 +468,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_9>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_9.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_9.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -485,7 +485,7 @@ public class MainActivity extends AppCompatActivity {
         if (scoreForPlayer_10>=500)
         {
 
-            String name = "    Congratulations, hero " + playerName_10.getText ().toString ();;
+            String name = getString( R.string.congratulations_)  + playerName_10.getText ().toString ();
             theWinDialog ( name );
         }
         m_Text="0";
@@ -505,7 +505,7 @@ public class MainActivity extends AppCompatActivity {
      *  @param  value The Name entered by the player .
      */
     private void displayNameforPlayer_2(String value) {
-        playerName_1.setText (value);
+        playerName_2.setText (value);
         m_Text="";
     }
 
@@ -589,7 +589,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
 
         //  Inflate the Layout Resource file.
-        View mView = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+        View mView = getLayoutInflater().inflate(R.layout.dialog_value, null);
 
         //  Get View elements from Layout file. Be sure to include inflated view name (mView)
         final EditText mValue = (EditText) mView.findViewById(R.id.etValue);
@@ -598,7 +598,7 @@ public class MainActivity extends AppCompatActivity {
         Button mCancel = (Button) mView.findViewById(R.id.btnCancel);
 
         //  Create the AlertDialog using everything we needed from above
-        mBuilder.setTitle("set value");
+        mBuilder.setTitle(getString( R.string.set_value ));
         mBuilder.setView(mView);
         final AlertDialog timerDialog = mBuilder.create();
 
@@ -645,7 +645,7 @@ public class MainActivity extends AppCompatActivity {
                        timerDialog.dismiss();
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Please enter a Value!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, R.string.please_enter_value , Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -672,7 +672,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
 
         //  Inflate the Layout Resource file.
-        View mView = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+        View mView = getLayoutInflater().inflate(R.layout.dialog_value, null);
 
         //  Get View elements from Layout file. Be sure to include inflated view name (mView)
         final EditText mValue = (EditText) mView.findViewById(R.id.etValue);
@@ -681,9 +681,9 @@ public class MainActivity extends AppCompatActivity {
         Button mCancel = (Button) mView.findViewById(R.id.btnCancel);
 
         //  Create the AlertDialog using everything we needed from above
-        mBuilder.setTitle("set Name");
+        mBuilder.setTitle( getString( R.string.set_name) );
         mBuilder.setView(mView);
-        final AlertDialog timerDialog = mBuilder.create();
+        final AlertDialog Dialog = mBuilder.create();
 
         //  Set Listener for the OK Button
         mOk.setOnClickListener(new View.OnClickListener() {
@@ -725,10 +725,10 @@ public class MainActivity extends AppCompatActivity {
                             displayNameforPlayer_10 (m_Text);
                             break;
                     }
-                    timerDialog.dismiss();
+                    Dialog.dismiss();
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Please enter the player name!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, R.string.please_enter_the_player_name , Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -737,12 +737,12 @@ public class MainActivity extends AppCompatActivity {
         mCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view) {
-                timerDialog.dismiss();
+                Dialog.dismiss();
             }
         });
 
         //  Finally, SHOW your Dialog!
-        timerDialog.show();
+        Dialog.show();
 
     }
 
@@ -751,28 +751,45 @@ public class MainActivity extends AppCompatActivity {
      * @param theWinMessage A message containing congratulations with the name of the winner .
      */
     public void theWinDialog(String theWinMessage){
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    builder.setTitle("The Win");
+
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+
+        //  Inflate the Layout Resource file.
+        View mView = getLayoutInflater().inflate(R.layout.dialog_thewin, null);
+
+        mBuilder.setTitle(getString( R.string.the_win) );
+
+        final TextView theWinTextView = (TextView) mView.findViewById ( R.id.et_thewin );
+        theWinTextView.setText ( theWinMessage );
+
+        Button mOk = (Button) mView.findViewById(R.id.btnReset);
+        Button mCancel = (Button) mView.findViewById(R.id.btncancel);
 
 
-    final TextView theWinTextView = new TextView(this);
-    theWinTextView.setText ( theWinMessage );
-    builder.setView(theWinTextView);
+        mBuilder.setView(mView);
+        final AlertDialog Dialog = mBuilder.create();
 
+        //  Set Listener for the OK Button
+        mOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
 
-    builder.setPositiveButton("Reset", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            setScoreToZero ();
-        }
-    });
-    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            dialog.cancel();
-        }
-    });
+                setScoreToZero ();
+                Dialog.dismiss();
+            }
+        });
 
-    builder.show();
-}
+        //  Set Listener for the CANCEL Button
+        mCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view) {
+                Dialog.dismiss();
+            }
+        });
+
+        //  Finally, SHOW your Dialog!
+        Dialog.show();
+
+    }
+
 }

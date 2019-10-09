@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">UNOScoreKeepe</string>
     <string name="action_settings">Settings</string>
+    <string name="_0">0</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="player_3">Player 3</string>
+    <string name="player_4">Player 4</string>
+    <string name="player_5">Player 5</string>
+    <string name="player_6">Player 6</string>
+    <string name="player_7">Player 7</string>
+    <string name="player_8">Player 8</string>
+    <string name="player_9">Player 9</string>
+    <string name="player_10">Player 10</string>
+    <string name="reset">reset</string>
+    <string name="ten_players">Ten Players</string>
+    <string name="eight_player">Eight Players</string>
+    <string name="six_player">Six Players</string>
+    <string name="four_player">Four Players</string>
+    <string name="tow_player">Two Players</string>
+    <string name="congratulations_">Congratulations, hero ^_^ </string>
+    <string name="set_value">Enter the value</string>
+    <string name="please_enter_value">Please enter a Value!</string>
+    <string name="set_name">Enter the name</string>
+    <string name="please_enter_the_player_name">Please enter the player name!</string>
+    <string name="the_win">The Win</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="inter_the_value">Inter the value</string>
 </resources>
