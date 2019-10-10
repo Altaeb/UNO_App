@@ -30,4 +30,4 @@ English                         | Arabic
 
 
 # Download
-You can download the apk here [SingleScreenApp](../../raw/master/app/screenshots/app-debug.apk)
+You can download the apk here [UNOScoreKeepe](../../raw/master/app/screenshots/app-debug.apk)
